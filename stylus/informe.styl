@@ -1,0 +1,542 @@
+azul-fondo = #022E5B
+azul-titulo = #346287
+blanco = #FFFFFF
+body-color = #f9f9f9
+border-gris = #cccccc
+
+@font-face {
+	font-family: 'icon';
+	src:url('../fonts/icomoon.eot?t6fcdt');
+	src:url('../fonts/icomoon.eot?t6fcdt#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.ttf?t6fcdt') format('truetype'),
+		url('../fonts/icomoon.woff?t6fcdt') format('woff'),
+		url('../fonts/icomoon.svg?t6fcdt#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'ubuntu';
+    src: url('../fonts/ubuntu-r-webfont.eot');
+    src: url('../fonts/ubuntu-r-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/ubuntu-r-webfont.woff2') format('woff2'),
+         url('../fonts/ubuntu-r-webfont.woff') format('woff'),
+         url('../fonts/ubuntu-r-webfont.ttf') format('truetype'),
+         url('../fonts/ubuntu-r-webfont.svg#ubunturegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body
+	background azul-fondo
+	font-family 'ubuntu', 'Helvetica', 'sans-serif'
+	height auto
+	font-size 16px
+	margin 0
+.content_global
+	background url(../img/pattpdi2.png)
+	margin 0 auto
+	max-width 1400px
+	min-width 300px
+	min-height 700px
+	width 100%
+	position absolute
+h1
+	color azul-fondo
+header
+	background blanco
+	border-bottom 1px solid #cccccc
+	height auto
+	width 100%
+	nav
+		height auto
+		margin 0 auto
+		font-size 0
+		padding 5px
+		.cont_menu
+			border-radius 3px
+			vertical-align top
+			ul
+				display table
+				background #F8F8F8
+				border 1px solid #e5e5e5
+				border-radius 3px
+				height 30px
+				list-style none
+				padding 0
+				li
+					display table-cell
+					text-align center
+					a
+						color #2D2D2D
+						border-bottom 2px solid #F8F8F8
+						display block
+						font-size 16px
+						padding 10px
+						text-decoration none
+						&:hover
+							border-bottom 2px solid #01295C
+							color #01295C
+					.menu_inicio
+						font-weight bold
+						&:before
+							font-family "icon"
+							content "\e902"
+						&:after
+							font-family "icon"
+					.menu_hva
+						&:after
+							font-family "icon"
+							content "\e903"
+					.menu_alert
+						&:after
+							font-family "icon"
+							content "\e901"
+					.menu_close
+						color #59be5d
+						&:after
+							font-family "icon"
+							content "\e900"
+						&:hover
+							border-bottom 2px solid #f0040c
+							color #f0040c
+
+		.logo
+			img
+				width 100%
+footer
+	padding 0
+	width 100%
+	position relative
+	// background red
+	// margin-top 90px
+	.pie_pag
+		height auto
+		margin 30px auto
+		padding 3px
+		width 210px
+		img
+			display block
+			margin 0 auto
+		.submenu
+			width 100%
+			margin-top 3px
+			a
+				font-size 14px
+				display inline-block
+				color gray
+				text-decoration none
+				padding 2px 5px
+		small
+			font-size 12px
+.body_content
+	background blanco
+	border-radius 5px
+	margin 0px auto
+	padding 15px
+	min-height 400px
+	h1
+		color #346287
+		font-size 1.4em
+	// input
+	// 	border 1px solid #cccccc
+	// 	padding 5px
+	// .btn_button
+	// 	background #3C5A6F
+	// 	border-radius 3px
+	// 	padding 7px 10px
+	// 	color blanco
+	// 	font-weight 500
+	// 	&:hover
+	// 		background #0C2D46
+	// .title_hva
+	// 	font-size 1.8555em
+	// 	margin 16px 0px
+	// section
+	// 	display table
+	// 	width 100%
+	// 	article
+	// 		background body-color
+	// 		border 4px solid blanco
+	// 		cursor pointer
+	// 		color #323232
+	// 		padding 10px
+	// 		text-align justify
+	// 		vertical-align top
+	// 		img
+	// 			display block
+	// 			position relative
+	// 			margin 0 auto
+	// 			text-align center
+	// 		h3
+	// 			text-align center
+	// 	.hva
+	// 		&:hover
+	// 			background #123B65
+	// 			color blanco
+	// 	.option
+	// 		&:hover
+	// 			background #2EC4B6
+	// 			color blanco
+	// 	.alert
+	// 		&:hover
+	// 			background #456990
+	// 			color blanco
+	.cont_titulos
+		display block
+		ul
+			font-size 0
+			list-style none
+			margin 0
+			padding 0
+			width 100%
+			li
+				border 1px solid #eff2f4
+				display block
+				height auto
+				margin 6px 0.66%
+				width 100%
+				a
+					background #eff2f4
+					border-left 2px solid #558ABB
+					color #4C555C
+					display block
+					font-size 16px
+					padding 5px
+					text-align center
+					text-decoration none
+					&:hover
+						background #50C14E
+						color blanco
+						border-radius 0px 20px 0px 0px
+						border-left 0
+						transition 0.5s all
+				.resumenes
+					background #FFF4CC
+					border-left 2px solid #FFE070
+		.cont_form
+			.title_form
+				color #346287
+			.cont_selectores
+				margin-bottom 10px
+				span
+					font-size 1em
+					color #346287
+					font-weight 600
+					padding 5px 5px 3px 3px
+				.span_fecha
+					&:after
+						font-family 'icon'
+						content " \e90a"
+						color azul-titulo
+						font-weight normal
+				.span_evaluador
+					&:after
+						font-family 'icon'
+						content " \e903"
+						font-weight normal
+						color azul-titulo
+				.fecha_title
+					font-size 16px
+					margin-left 2px
+					padding 0 3px
+					width 90px
+				select
+					border 1px solid #e2e2e2
+				.des_titulo
+					border 1px solid gray
+					border-radius 5px
+					display block
+					margin 16px 0px
+					padding 10px
+					width 90%
+			.btn_anadir
+				background #47649F
+				color blanco
+				border 0
+				border-radius 3px
+				margin-top 16px
+				padding 7px
+				margin-right 6px
+				&:hover
+					background #50A3E1
+			.btn_cerrar
+				&:hover
+					background #E55934
+		.resumen_estadistico
+			table
+				// background red
+				margin-bottom 20px
+				width 100%
+				thead
+					tr
+						text-align center
+						td
+							border 1px solid #565656
+							&:first-child
+								border none
+								border-bottom 1px solid #565656
+						.fecha_resumen
+							padding 2px
+							font-size 16px
+							width 90px
+
+				tbody
+					tr
+						td
+							border-bottom 1px solid gray
+							border-right 1px solid gray
+							padding 3px 0px 3px 5px
+							border-color gray
+							&:first-child
+								border-left 1px solid gray
+							input
+								display block
+								margin 0 auto
+								padding 2px
+								text-align center
+								width 30px
+								border 1px solid #d1d1d1
+			textarea
+				width 70%
+				display block
+				margin-bottom 5px
+			.btn_rs
+				background #47639E
+				border none
+				border-radius 3px
+				padding 7px
+				color blanco
+				display inline-block
+				margin-right 6px
+				&:hover
+					background #34A853
+			.btn_close
+				&:hover
+					background #E55934
+	.panel_edition
+		display block
+		.list_editar
+			cursor auto
+			min-height 300px
+			overflow-x auto
+			white-space nowrap
+			div
+				margin 10px auto
+				textarea
+					display block
+					margin-top 10px
+					width 70%
+				img
+					width 30px
+			#msgFormulario
+				width 60px
+				display block
+				margin 16px 0px
+				img
+					width 30px
+					display block
+					margin 0
+			span
+				margin-right 3px
+				&:after
+					font-family 'icon'
+					content " \e90a"
+					color #27AE60
+			.fecha
+				font-size 14px
+				width 100px
+				padding 2px 4px
+			.btn_filtrar
+				padding 3px 5px
+				font-size 14px
+				background #47639E
+				margin-left 5px
+				color blanco
+				border 0
+				border-radius 2px
+			table
+				width 100%
+				background blanco
+				border-radius 3px
+				min-width 600px
+				margin-top 10px
+				th
+					padding 3px
+					border-bottom 1px solid #e0e0e0
+				td
+					padding 3px
+					a
+						color #01295C
+						font-weight bold
+						text-decoration none
+						&:hover
+							text-decoration underline
+							color #C70039
+				.cabecera
+					text-align center
+					border 1px solid #000000
+				#r_tipos
+					tr
+						border 1px solid #000000
+						td
+							text-align center
+							border 1px solid #000000
+							&:nth-child(1)
+								text-align left
+							input
+								display block
+								margin 0 auto
+								text-align center
+								width 30px
+	// .body_hva
+	// 	margin-top 16px
+	// 	.hva_personal
+	// 		cursor auto
+	// 		.perfil
+	// 			.dni
+	// 				display block
+	// 				margin 0 auto
+	// 				text-align center
+	// 				padding 0px 2px
+	// 		.perfil_general
+	// 			.datos_perfil
+	// 				h4
+	// 					text-align center
+	// 					padding 0
+	// 					// background green
+	// 					margin 2px 0px
+	// 				.cargo
+	// 					display block
+	// 					text-align center
+	// 					margin 0 auto
+	// 					padding 0px 5px
+				// .perfil_option
+				// 	height auto
+				// 	div
+				// 		display block
+				// 		margin 0 auto
+				// 		height auto
+				// 		ul
+				// 			display table
+				// 			list-style none
+				// 			padding 0
+				// 			width 100%
+				// 			li
+				// 				display table-cell
+				// 				border 1px solid #F9F9F9
+				// 				// width 25%
+		  //   					a
+				// 					text-align center
+				// 					color blanco
+				// 					display block
+				// 					padding 10px 5px
+				// 					font-size 16px
+				// 					text-decoration none
+				// 					border-radius 5px 5px 0px 0px
+				// 				.enlace_hva
+				// 					background tomato
+				// 					&:hover
+				// 						background #ff5233
+				// 				.enlace_anadir
+				// 					background #5CB85C
+				// 					&:hover
+				// 						background #4aaa4a
+				// 				.enlace_editar
+				// 					background #FFB800
+				// 					&:hover
+				// 						background #eaa900
+				// 				.enlace_resumen
+				// 					background #842b9b
+				// 					&:hover
+				// 						background #5b1e6b
+
+@media screen and (min-width: 300px)
+	.cont_menu
+		margin 5px auto 0px auto
+		width 90%
+		ul
+			width 100%
+
+	.logo
+		width 40%
+		margin 0px
+		min-width 129px
+		max-width 135px
+		margin 0 auto
+		img
+			width 100%
+.body_content
+	width 85%
+	// article
+	// 	img
+	// 		width 30%
+
+@media screen and (min-width: 500px)
+	// .body_content
+	// 	.cont_titulos
+	// 		.titulos_generales
+	// 			li
+	// 				display inline-block
+	// 				width 48%
+	// 				vertical-align top
+	// 				a
+	// 					font-size 15px
+	// 					padding 25% 0%
+	// 					min-height 55px
+@media screen and (min-width 720px)
+	.body_content
+		width 95%
+		// h1
+		// 	font-size 2em
+		// article
+		// 	img
+		// 		width 25%
+		// 	p 
+		// 		font-size 1.1em
+		// .cont_menu
+		// 	width 73%
+
+@media screen and (min-width 950px)
+	// .body_content
+	// 	.cont_titulos
+	// 		.titulos_generales
+	// 			li
+	// 				width 18.3333%
+	// 		.titulos_resumenes
+	// 			li
+	// 				display inline-block
+	// 				width 48%
+					
+@media screen and (min-width 1000px)
+	nav
+		width 77%
+		display table
+		height 120px
+		div
+			display table-cell
+		.cont_menu
+			height 120px
+			position relative
+			margin-top 0
+			right 0
+			ul
+				bottom 30px
+				position absolute
+				right 0px
+				width 30%
+		.logo
+			width 10%
+	.body_content
+		width 100%
+		// .section_panel
+		// 	article
+		// 		display table-cell
+		// 		width 33.3333%
+		// 		img
+		// 			width 60%
+@media screen and (min-width 1262px)
+	.body_hva
+		.hva_personal
+			width 49%
