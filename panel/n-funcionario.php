@@ -29,7 +29,7 @@ include '../archivo/conexion.php';
 				<h3>Nuevo Funcionario <i class="flotar fa fa-user-plus" aria-hidden="true"></i></h3>
 					<div class="b-rut">
 						<label for="rut"><i class="fa fa-search" aria-hidden="true"></i> Rut</label> <input type="text" name="username" id="username" class="rut_class" autocomplete="off" placeholder="x.xxx.xxx-x"/>
-						<div id="msgUsuario" ></div>
+						<div id="msgUsuario"></div>
 					</div>
 					<div id="mostrarFormulario" class="show-form">
 						<div>

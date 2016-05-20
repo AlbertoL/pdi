@@ -14,29 +14,29 @@ border-gris = #cccccc
 	-o-box-sizing border-box
 	box-sizing border-box
 }
-@font-face {
-	font-family: 'icon';
-	src:url('../fonts/icomoon.eot?t6fcdt');
-	src:url('../fonts/icomoon.eot?t6fcdt#iefix') format('embedded-opentype'),
-		url('../fonts/icomoon.ttf?t6fcdt') format('truetype'),
-		url('../fonts/icomoon.woff?t6fcdt') format('woff'),
-		url('../fonts/icomoon.svg?t6fcdt#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
+// @font-face {
+// 	font-family: 'icon';
+// 	src:url('../fonts/icomoon.eot?t6fcdt');
+// 	src:url('../fonts/icomoon.eot?t6fcdt#iefix') format('embedded-opentype'),
+// 		url('../fonts/icomoon.ttf?t6fcdt') format('truetype'),
+// 		url('../fonts/icomoon.woff?t6fcdt') format('woff'),
+// 		url('../fonts/icomoon.svg?t6fcdt#icomoon') format('svg');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
 
-@font-face {
-    font-family: 'ubuntu';
-    src: url('../fonts/ubuntu-r-webfont.eot');
-    src: url('../fonts/ubuntu-r-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/ubuntu-r-webfont.woff2') format('woff2'),
-         url('../fonts/ubuntu-r-webfont.woff') format('woff'),
-         url('../fonts/ubuntu-r-webfont.ttf') format('truetype'),
-         url('../fonts/ubuntu-r-webfont.svg#ubunturegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+// @font-face {
+//     font-family: 'ubuntu';
+//     src: url('../fonts/ubuntu-r-webfont.eot');
+//     src: url('../fonts/ubuntu-r-webfont.eot?#iefix') format('embedded-opentype'),
+//          url('../fonts/ubuntu-r-webfont.woff2') format('woff2'),
+//          url('../fonts/ubuntu-r-webfont.woff') format('woff'),
+//          url('../fonts/ubuntu-r-webfont.ttf') format('truetype'),
+//          url('../fonts/ubuntu-r-webfont.svg#ubunturegular') format('svg');
+//     font-weight: normal;
+//     font-style: normal;
 
-}
+// }
 @font-face {
     font-family: 'roboto';
     src: url('../fonts/roboto.eot');
@@ -201,7 +201,7 @@ footer
 		background blanco
 		border 1px #f4f4f4 solid
 		display inline-block
-		height auto
+		// height auto
 		padding 5px
 		vertical-align top
 		.c-form
@@ -253,12 +253,19 @@ footer
 				margin-bottom 0px
 				border-color red
 				font-weight 100
+			.correcto
+				// background #def0a5
+				color green
+				font-size 12px
+				margin-top 0px
+				margin-bottom 0px
+				border-color red
+				font-weight bold
 			.flotar
 				float right
 				margin-top 3px
 			.show-form, .b-rut
-				padding-left 10px
-		
+				padding-left 10px		
 @media screen and (min-width: 300px)
 	.cont_menu
 		display none
@@ -278,6 +285,7 @@ footer
 			display none
 	.contenedor-section
 		width 100%
+		min-height 400px
 		.c-form
 			width 100%
 			// background red
@@ -336,6 +344,11 @@ footer
 			display block
 	.contenedor-section
 		width 79.5555%
+		height 600px
+		background red
+		.c-form
+			width 50%
+			margin 0px 30px
 @media screen and (min-width: 1050px)
 	.contenedor-section
 		width 80%

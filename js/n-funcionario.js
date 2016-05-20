@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    // $('#mostrarFormulario').hide();
+    $('#mostrarFormulario').hide();
     $("#fecha1").datepicker({
         changeMonth: true,
         changeYear:true,
@@ -7,7 +7,7 @@ $(document).ready(function(){
     });
     // Menu Lateral
     $('.menu li:has(ul)').click(function(e) {
-        e.preventDefault();
+        // e.preventDefault();
         if ($(this).hasClass('activado')) {
             $(this).removeClass('activado');
             $(this).children('ul').slideUp();
@@ -81,9 +81,13 @@ $(document).ready(function(){
 				},
 				success:function(respuesta){
 					if(respuesta=='1'){
-			         $('#msgUsuario').html("Funcionario se encuentra registrado");
-							$('#mostrarFormulario').hide();
+                        $('#msgUsuario').removeClass('correcto');
+                        $('#msgUsuario').addClass('error');
+                        $('#msgUsuario').html("Funcionario se encuentra registrado");
+						$('#mostrarFormulario').hide();
 					}else{
+                        $('#msgUsuario').removeClass('error');
+                        $('#msgUsuario').addClass('correcto');
 						$('#msgUsuario').html("Funcionario se encuentra disponible");
 						$('#mostrarFormulario').show();
 					   }

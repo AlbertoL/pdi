@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	localStorage.clear();
 	$('.menu li:has(ul)').click(function(e) {
-		e.preventDefault();
+		// e.preventDefault();
 		if ($(this).hasClass('activado')) {
 			$(this).removeClass('activado');
 			$(this).children('ul').slideUp();
