@@ -7,16 +7,10 @@ $(document).ready(function(){
 	{
 		return this.optional(element) || /^[a-záéíóúàèìòùäëïöüñ\s]+$/i.test(value);
 	});
-	// $.validator.addMethod('rut', function(value, element)
-	// {
-	// 	return this.optional(element) || /^0*(\d{1,3}(\.?\d{3})*)\-?([\dkK])$/.test(value);
-	// });
-	// $.validator.addMethod("rut", function(value, element) {
- //  	return this.optional(element) || $.Rut.validar(value);
-	// }, "Este campo debe ser un rut valido.");
+
 	$.validator.addMethod('clave', function(value, element)
 	{
-		return this.optional(element) || /^[a-zA-ZÁáÀàÉéÈèÍíÌìÓóÒòÚúÙùÑñüÜ0-9]+$/i.test(value);
+		return this.optional(element) || /^[a-zA-ZÁáÀàÉéÈèÍíÌìÓóÒòÚúÙùÑñüÜ0-9@_]+$/i.test(value);
 	});
 	$.validator.addMethod('direccion', function(value, element)
 	{
@@ -49,7 +43,4 @@ $(document).ready(function(){
 			tel: {required: 'Campo requerido', tel: 'codigo - numero', minlength: 'El mínimo de caracteres es 6', maxlength: 'El máximo de caracteres son 20'}
        	}
     	});
-	// $('#rut_cl').Rut({
-	// 	validation: false
-	// });
 });

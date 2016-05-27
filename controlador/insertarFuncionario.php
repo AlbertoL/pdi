@@ -4,12 +4,11 @@ include '../archivo/conexion.php';
 $db=new conexion();
 $db->conectar();
 
-
 $error="";
 $rut=$db->cleanString($_POST['username']);
 $nombre=$db->cleanString($_POST['nombre']);
 $apellido=$db->cleanString($_POST['apellido']);
-$clave=base64_encode($db->cleanString($_POST['clave']));
+$clave=$db->cleanString($_POST['clave']);
 $fecha=$db->fechasql($_POST['fecha']);
 $unidad=intval($_POST['unidad']);
 $estado_unidad=false;
@@ -26,18 +25,24 @@ $id_categoria=intval($_POST['categoria']);
 if($unidad==0 or $grado==0 or $id_categoria==0){
 	$error.="9";
 }
-if(empty($nombre)){
+if(empty($nombre) or strlen($nombre)<2 or strlen($nombre)>30){
 	$error.="9";
 }elseif (preg_match("/[^a-záéíóúàèìòùäëïöüñ\s]/i", $nombre)) {
 	$error="9";
 }
-if(empty($apellido)){
+if(empty($apellido) or strlen($apellido)<2 or strlen($apellido)>30){
 	$error.="9";
 }elseif (preg_match("/[^a-záéíóúàèìòùäëïöüñ\s]/i", $apellido)) {
 	$error="0";
 }
+if(empty($clave) or strlen($clave)<2 or strlen($clave)>30){
+	$error.="9";
+}elseif (preg_match("/[^a-zA-Z0-9@_\s]/i", $clave)) {
+	$error.="9";
+}
 
 if($error == ""){
+	$clave=base64_encode($db->cleanString($_POST['clave']));
 	$consultaUsuario=$db->consulta("select * from usuarios where rut='$rut'");
 	if($db->num_rows($consultaUsuario)==0){ 
 	$consulta=$db->consulta("select max(id_detalle_f)+1 from detalle_funcionario");
@@ -59,9 +64,7 @@ if($error == ""){
 	}
 }
 else{
-	echo "2";
+	echo "9";
 }
-
-
 
 ?>

@@ -41,7 +41,7 @@ $(document).ready(function(){
         },
         success:function(x){
             $('#listargrado').html(x);
-            console.log(x);
+            // console.log(x);
         }
     }); 
 
@@ -53,7 +53,7 @@ $(document).ready(function(){
         },
         success:function(x){
             $('#listarcategoria').html(x);
-            console.log(x);
+            // console.log(x);
         }
     });
 
@@ -123,20 +123,28 @@ $(document).ready(function(){
                 url:"../controlador/insertarFuncionario.php",
                 type:"POST",
                 beforeSend:function(){
-                                    $('#msgFormulario').html('<img src="../loading.gif"/ width=60> verificando');
-                                },
+                    $('#msgFormulario').html('<img src="../loading.gif"/ width=60> verificando');
+                },
                 success:function(respuesta){
                     console.log(respuesta);
-                                    if(respuesta=="1"){
-                                        $('#mostrarFormulario').html("Funcionario ingresado correctamente");
+                    if(respuesta=="1"){
+                        $('#msgFormulario').removeClass('msg-error');
+                        $('#msgFormulario').addClass('msg-v');
+                        $('#msgFormulario').html("Funcionario ingresado correctamente");
                                         
-                                    }else if(respuesta=="2"){
-                                        $('#mostrarFormulario').html("Usuario ya se encuentra en nuestros registros");
+                    }else{
+                        if(respuesta=="2"){
+                            $('#msgFormulario').removeClass('msg-v');
+                            $('#msgFormulario').addClass('msg-error');
+                            $('#msgFormulario').html("Usuario ya existe...");
                                         
-                                    }else{
-                                        $('#mostrarFormulario').html("No existen los valores indicados...");
-                                    }
-                                }   
+                        }else{
+                            $('#msgFormulario').removeClass('msg-v');
+                            $('#msgFormulario').addClass('msg-error');
+                            $('#msgFormulario').html("No existen los valores indicados...");
+                        }
+                    }
+                    }   
 
             });
             return false;

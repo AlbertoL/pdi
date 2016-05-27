@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	$.validator.addMethod('pass', function(value, element)
 	{
-		return this.optional(element) || /^[a-zA-ZÁáÀàÉéÈèÍíÌìÓóÒòÚúÙùÑñüÜ0-9]+$/i.test(value);
+		return this.optional(element) || /^[a-zA-ZÁáÀàÉéÈèÍíÌìÓóÒòÚúÙùÑñüÜ0-9@_]+$/i.test(value);
 	});
 	
 	$("#frmUsuario").validate
