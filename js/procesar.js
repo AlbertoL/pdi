@@ -12,7 +12,7 @@ $(document).ready(function(){
 				console.log(respuesta);
 				switch(respuesta){
 					case '1':
-			 		$(location).attr('href','./panel/index.php');
+			 		$(location).attr('href','./panel/main.php');
 					break;
 					case '2':
 					alert("No tiene Permisos para acceder");

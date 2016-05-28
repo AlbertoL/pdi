@@ -11,7 +11,7 @@ INNER JOIN unidad un ON uj.id_unidad = un.id_unidad
 INNER JOIN cargo cg ON cg.id_cargo = df.id_cargo WHERE us.`rut`='$rut' AND df.id_estado_usu ='1' ");
 if($db->num_rows($consulta)>0){
 	$retorno="<div id='d_unidad'><select id='categoria' name='categoria' class='categoria' required>
-	<option value=''>(Seleccione una Categoría)</option>";
+	<option value=''>(Seleccione una unidad)</option>";
 		while($row=$db->fetch_array($consulta)){
 		$retorno.="<option value='".$row[0]."'>".$row[1]."</option>";
 	}

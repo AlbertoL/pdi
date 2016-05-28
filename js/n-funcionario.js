@@ -88,7 +88,7 @@ $(document).ready(function(){
 					}else{
                         $('#msgUsuario').removeClass('error');
                         $('#msgUsuario').addClass('correcto');
-						$('#msgUsuario').html("Funcionario se encuentra disponible");
+						$('#msgUsuario').html("Funcionario disponible");
 						$('#mostrarFormulario').show();
 					   }
 					}	
@@ -141,7 +141,7 @@ $(document).ready(function(){
                         }else{
                             $('#msgFormulario').removeClass('msg-v');
                             $('#msgFormulario').addClass('msg-error');
-                            $('#msgFormulario').html("No existen los valores indicados...");
+                            $('#msgFormulario').html("Complete campos correctamente...");
                         }
                     }
                     }   

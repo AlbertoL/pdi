@@ -19,12 +19,6 @@ include '../controlador/sesion.php';
 		<div class="body_content">
 		<h1 class="title_hva">Editar Información</h1>
 		<section class="body_hva">
-		<!-- <div class="cont_search">
-			<form action="#">
-			<input type="text" id="search" class="cl_search" placeholder="Rut"/>
-			<input type="button" id="btn_search" class="btn_search" value="Buscar" />
-			</form>
-		</div> -->
 		<form id="frmUsuario" action="#">
 			<article class="cont_empleado">
 				<div>
@@ -74,7 +68,7 @@ include '../controlador/sesion.php';
 								success:function(respuesta){
 									if(respuesta=='0'){
 										localStorage.setItem('rut_Usuario',$('#username').val());
-										$('#msgUsuario').html("Funcionario no se encuentra disponible");
+										$('#msgUsuario').html("Funcionario disponible");
 										$('#mostrarFormulario').hide();
 									}else{
 										$('#msgUsuario').html(respuesta);

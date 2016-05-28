@@ -11,7 +11,7 @@
 		<li><a href="#"><i class="icono izquierda fa fa-users" aria-hidden="true"></i>Funcionarios<i class="icono derecha fa fa-chevron-down" aria-hidden="true"></i></a>
 			<ul>
 				<li><a href="./n-funcionario.php">Nuevo</a></li>
-				<li><a href="#">Modificar</a></li>
+				<li><a href="./m-funcionario.php">Editar</a></li>
 			</ul>
 		</li>
 		<li><a href="#"><i class="icono izquierda fa fa-building" aria-hidden="true"></i>Unidad<i class="icono derecha fa fa-chevron-down" aria-hidden="true"></i></a>
