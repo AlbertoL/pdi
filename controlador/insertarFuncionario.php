@@ -22,6 +22,17 @@ $grado=intval($_POST['grado']);
 $id_cargo=intval($_POST['cargo']);
 $id_categoria=intval($_POST['categoria']);
 
+$vRut = $db->verifica_RUT($rut);
+  switch($vRut) {
+    case 0 : $error=""; break;
+    case 1 : $error.="9"; break;
+    case 2 : $error.="9"; break;
+    case 3 : $error.="9"; break;
+    case 4 : $error.="9"; break;
+    case 5 : $error.="9"; break;
+    default: echo 'Error de la décimanovena dimensión!!! Corran en círculos!!!'; break;
+ }
+
 if($unidad==0 or $grado==0 or $id_categoria==0){
 	$error.="9";
 }

@@ -11,16 +11,16 @@ if($db->num_rows($consulta)>0){
 	while($row=$db->fetch_array($consulta)){
 			$retorno.='	
 					<div>
-						<label for="nombre">Nombres</label> <input type="text" value='.$row[1].' name="nombre" id="nombre" class="cl_nombre" placeholder="Escriba sus nombres"/>
+						<label for="nombre"><i class="fa fa-user" aria-hidden="true"></i> Nombres</label> <input type="text" value='.$row[1].' name="nombre" id="nombre" class="cl_nombre" placeholder="Escriba sus nombres"/>
 					</div>
 					<div>
-						<label for="apellido">Apellidos</label> <input type="text" value='.$row[2].' name="apellido" id="apellido" class="last" placeholder="Escriba sus apellidos"/>
+						<label for="apellido"><i class="fa fa-user" aria-hidden="true"></i> Apellidos</label> <input type="text" value='.$row[2].' name="apellido" id="apellido" class="last" placeholder="Escriba sus apellidos"/>
 					</div>
 					<div>
-							<label for="clave">Contraseña</label> <input type="password" value='.base64_decode($row[4]).' name="clave" id="clave" class="cl_nombre" placeholder="Ingrese su password"/>
+							<label for="clave"><i class="fa fa-lock" aria-hidden="true"></i> Contraseña</label> <input type="password" value='.base64_decode($row[4]).' name="clave" id="clave" class="cl_nombre" placeholder="Ingrese su password"/>
 						</div>
 					<div>
-						<label for="fecha1">Fecha de Ingreso</label> <input type="text" name="fecha" value='.$db->fechaNormal($row[5]).' id="fecha1" class="cl_nombre" placeholder="dd/mm/aaaa"/>
+						<label for="fecha1"><i class="fa fa-calendar" aria-hidden="true"></i> Fecha de Ingreso</label> <input type="text" name="fecha" value='.$db->fechaNormal($row[5]).' id="fecha1" class="cl_nombre" placeholder="dd/mm/aaaa"/>
 					</div>';
 
 	}

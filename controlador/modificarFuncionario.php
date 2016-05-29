@@ -6,7 +6,6 @@ $db->conectar();
 $rut=$db->cleanString($_POST['username']);
 $nombre=$db->cleanString($_POST['nombre']);
 $apellido=$db->cleanString($_POST['apellido']);
-// $clave=base64_encode($db->cleanString($_POST['clave']));
 $clave=$db->cleanString($_POST['clave']);
 $fecha=$db->fechasql($_POST['fecha']);
 $unidad=intval($_POST['unidad']);
