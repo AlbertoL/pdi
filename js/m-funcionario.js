@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    localStorage.clear();
     $('#mostrarFormulario').hide();
     $("#fecha1").datepicker({
         changeMonth: true,
@@ -143,13 +144,19 @@ $(document).ready(function(){
                 success:function(respuesta){
                                 console.log(respuesta);
                                     if(respuesta=="1"){
-                                        $('#mostrarFormulario').html("Funcionario actualizado correctamente");
+                                        $('#msgFormulario').removeClass('msg-error');
+                                        $('#msgFormulario').addClass('msg-v');
+                                        $('#msgFormulario').html("Funcionario actualizado correctamente");
                                         
                                     }else if(respuesta=="2"){
-                                        $('#mostrarFormulario').html("Usuario no existe");
+                                        $('#msgFormulario').removeClass('msg-v');
+                                        $('#msgFormulario').addClass('msg-error');
+                                        $('#msgFormulario').html("Usuario no existe");
                                         
                                     }else{
-                                        $('#mostrarFormulario').html("No existen los valores indicados...");
+                                        $('#msgFormulario').removeClass('msg-v');
+                                        $('#msgFormulario').addClass('msg-error');
+                                        $('#msgFormulario').html("No existen los valores indicados...");
                                     }
                                 }
             });

@@ -35,7 +35,7 @@ if(empty($apellido) or strlen($apellido)<2 or strlen($apellido)>30){
 }elseif (preg_match("/[^a-záéíóúàèìòùäëïöüñ\s]/i", $apellido)) {
 	$error="9";
 }
-if(empty($clave) or strlen($clave)<2 or strlen($clave)>30){
+if(empty($clave) or strlen($clave)<8 or strlen($clave)>30){
 	$error.="9";
 }elseif (preg_match("/[^a-zA-Z0-9@_\s]/i", $clave)) {
 	$error.="9";

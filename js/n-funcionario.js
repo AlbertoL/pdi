@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    localStorage.clear();
     $('#mostrarFormulario').hide();
     $("#fecha1").datepicker({
         changeMonth: true,

@@ -68,7 +68,7 @@ include '../archivo/conexion.php';
 	<script src="../js/jquery-ui.min.js"></script>
 	<script src="../js/jquery.validate.min.js"></script>
 	<script src="../js/jquery.Rut.min.js"></script>
-	<script src="../js/validar.js"></script>
+	<!-- <script src="../js/validar.js"></script> -->
 	<script src="../js/m-funcionario.js"></script>
 </body>
 </html>
