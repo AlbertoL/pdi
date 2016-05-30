@@ -19,8 +19,8 @@ if($db->num_rows($consulta)>0){
 					<div>
 							<label for="clave"><i class="fa fa-lock" aria-hidden="true"></i> Contraseña</label> <input type="password" value='.base64_decode($row[4]).' name="clave" id="clave" class="cl_nombre" placeholder="Ingrese su password"/>
 						</div>
-					<div>
-						<label for="fecha1"><i class="fa fa-calendar" aria-hidden="true"></i> Fecha de Ingreso</label> <input type="text" name="fecha" value='.$db->fechaNormal($row[5]).' id="fecha1" class="cl_nombre" placeholder="dd/mm/aaaa"/>
+					<div id="date">
+						<label for="fecha1"><i class="fa fa-calendar" aria-hidden="true"></i> Fecha de Ingreso</label> <input type="text" id="fecha1" name="fecha" value='.$db->fechaNormal($row[5]).'  class="cl_nombre" placeholder="dd/mm/aaaa"/>
 					</div>';
 
 	}

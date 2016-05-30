@@ -6,6 +6,13 @@ $(document).ready(function(){
         changeYear:true,
         dateFormat: 'dd-mm-yy',
     });
+    $('div').on('click', '#fecha1', function() {
+        $(this).datepicker({
+        changeMonth: true,
+        changeYear:true,
+        dateFormat: 'dd-mm-yy',
+        });
+    });
     // Menu Lateral
     $('.menu li:has(ul)').click(function(e) {
         // e.preventDefault();

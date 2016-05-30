@@ -32,18 +32,7 @@ include '../archivo/conexion.php';
 						<div id="msgUsuario"></div>
 					</div>
 					<div id="mostrarFormulario" class="show-form">
-						<!-- <div>
-							<label for="name"><i class="fa fa-user" aria-hidden="true"></i> Nombres</label> <input type="text" name="nombre" id="nombre" class="cl_nombre" placeholder="Escriba sus nombres" required/>
-						</div>
-						<div>
-							<label for="apellidos"><i class="fa fa-user" aria-hidden="true"></i> Apellidos</label> <input type="text" name="apellido" id="apellido" class="last" placeholder="Escriba sus apellidos" required/>
-						</div>
-						<div>
-							<label for="clave"><i class="fa fa-lock" aria-hidden="true"></i> Contraseña</label> <input type="password" name="clave" id="clave" class="cl_nombre" placeholder="Ingrese su password" required/>
-						</div>
-						<div>
-							<label for="fecha1"><i class="fa fa-calendar" aria-hidden="true"></i> Fecha de Ingreso</label><input type="text" name="fecha" id="fecha1" class="cl_nombre" placeholder="dd/mm/aaaa" required/>
-						</div> -->
+						
 						<div id="listarunidad2"></div>
 						<div id="listarcargo"></div>
 						<div id="listrarunidadsinjefe"></div>
@@ -68,7 +57,7 @@ include '../archivo/conexion.php';
 	<script src="../js/jquery-ui.min.js"></script>
 	<script src="../js/jquery.validate.min.js"></script>
 	<script src="../js/jquery.Rut.min.js"></script>
-	<!-- <script src="../js/validar.js"></script> -->
+	<script src="../js/validar.js"></script>
 	<script src="../js/m-funcionario.js"></script>
 </body>
 </html>
