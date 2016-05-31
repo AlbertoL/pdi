@@ -1,13 +1,9 @@
 $(document).ready(function(){
     localStorage.clear();
     $('#mostrarFormulario').hide();
-    $("#fecha1").datepicker({
-        changeMonth: true,
-        changeYear:true,
-        dateFormat: 'dd-mm-yy',
-    });
+    
     $('div').on('click', '#fecha1', function() {
-        $(this).datepicker({
+        $('#fecha1').datepicker({
         changeMonth: true,
         changeYear:true,
         dateFormat: 'dd-mm-yy',

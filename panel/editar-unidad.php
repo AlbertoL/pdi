@@ -178,8 +178,6 @@ include '../controlador/sesion.php';
 
 });
 </script>
-<script type="text/javascript">
-	
-</script>
+
 </body>
 </html>

@@ -13,16 +13,36 @@ $comuna=intval($_POST['comuna']);
 $unidadpadre=intval($_POST['unidad']);
 
 
-if($unidad==0 && $comuna==0 && $provincia==0 && $region==0){
+if($id == 0 || $unidadpadre==0 || $comuna==0 || $provincia==0 || $region==0 || empty($nombre)){
 	echo "9";
 }
-$consultaUnidad=$db->consulta("SELECT * FROM unidad WHERE id_unidad='$id'");
-// echo $id;
-if ($db->num_rows($consultaUnidad)>0) {
-$consultaModificarUnidad=$db->consulta("UPDATE unidad SET nombre_unidad='$nombre', sigla='$sigla', desc_unidad='$descripcion',comuna_id='$comuna',id_unidad_padre='$unidad' WHERE id_unidad='$id'");
-	echo "1";
+if(empty($nombre) or strlen($nombre)<2 or strlen($nombre)>30){
+	$error.="9";
+}elseif(preg_match("/[^a-záéíóúàèìòùäëïöüñ\s]/i", $nombre)) {
+	$error="9";
+}
+if(empty($sigla) or strlen($sigla)<2 or strlen($sigla)>30){
+	$error.="9";
+}elseif(preg_match("/[^a-záéíóúàèìòùäëïöüñ\s]/i", $sigla)) {
+	$error="9";
+}
+if(empty($descripcion) or strlen($descripcion)<2 or strlen($descripcion)>30){
+	$error.="9";
+}elseif(preg_match("/[^a-záéíóúàèìòùäëïöüñ\s]/i", $descripcion)) {
+	$error="9";
+}
+
+if ($error == "") {
+	$consultaUnidad=$db->consulta("SELECT * FROM unidad WHERE id_unidad='$id'");
+
+	if ($db->num_rows($consultaUnidad)>0) {
+		$consultaModificarUnidad=$db->consulta("UPDATE unidad SET nombre_unidad='$nombre', sigla='$sigla', desc_unidad='$descripcion',comuna_id='$comuna',id_unidad_padre='$unidad' WHERE id_unidad='$id'");
+		echo "1";
+	}else{
+		echo "2";
+	}
 }else{
-	echo "2";
+	echo $error;
 }
 
 ?>

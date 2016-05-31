@@ -8,7 +8,7 @@ $retorno="";
 
 $consulta=$db->consulta("SELECT * FROM comuna where COMUNA_PROVINCIA_ID='$provincia'");
 if($db->num_rows($consulta)>0){
-	$retorno.="<label for='c_comuna'>Comuna</label>";
+	$retorno.='<label for="c_comuna"><i class="fa fa-map-marker" aria-hidden="true"></i> Comuna</label>';
 	$retorno.="<select id='comuna' name='comuna' required><option value=''>(SELECCIONE)</option>";
 	while ($rows=$db->fetch_array($consulta)) {
 		$retorno.="<option value=".$rows[0].">".$rows[1]."</option>";

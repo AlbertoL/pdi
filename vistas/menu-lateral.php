@@ -16,8 +16,8 @@
 		</li>
 		<li><a href="#"><i class="icono izquierda fa fa-building" aria-hidden="true"></i>Unidad<i class="icono derecha fa fa-chevron-down" aria-hidden="true"></i></a>
 			<ul>
-				<li><a href="#">Item 1</a></li>
-				<li><a href="#">Item 2</a></li>
+				<li><a href="./n-unidad.php">Nuevo</a></li>
+				<li><a href="./m-unidad.php">Editar</a></li>
 			</ul>
 		</li>
 		<li><a href="#"><i class="icono izquierda fa fa-text-height" aria-hidden="true"></i>Titulos HVA<i class="icono derecha fa fa-chevron-down" aria-hidden="true"></i></a>
